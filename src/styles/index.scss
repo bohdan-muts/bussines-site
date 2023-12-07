@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import './vars';
+@import './header';
+@import './intro-header';
+@import './footer';
+@import './page-about';
+@import './page-work';
+
+::-webkit-scrollbar {
+    width: 5px;
+} 
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    &:hover{
+        background: rgb(24, 24, 24);
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+body{
+    text-align: center;
+}
+a{
+    display: block;
+    color: $black;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+picture{
+    display: block;
+}
+img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1850px;
+    margin: 0 auto;
+    // border: 1px solid $black;
+    @media (max-width: 1699px){
+        padding: 0 15px;
+    }
+}
+.logo-pic {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    transition: opacity .1s ease-in-out;
+    &:hover{
+        opacity: .8;
+    }
+}
+
+.logo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+.h_big{
+    position: relative;
+    font-size: 64px;
+    line-height: 125%;
+    font-weight: 400;
+    @media (max-width: 600px){
+        font-size: 48px;
+    }
+}
+.h_mid{
+    position: relative;
+    font-size: 36px;
+    line-height: 140%;
+    font-weight: 400;
+    @media (max-width: 600px){
+        font-size: 24px;
+    }
+}
+.h_sml{
+    position: relative;
+    font-size: 20px;
+    line-height: 175%;
+    @media (max-width: 600px){
+        font-size: 18px;
+    }
+}
+.p_big{
+    font-size: 20px;
+    line-height: 175%;
+    font-weight: 400;
+    @media (max-width: 600px){
+        font-size: 16px;
+    }
+}
+.p_sml{
+    font-size: 16px;
+    line-height: 210%;
+    font-weight: 400;
+    @media (max-width: 600px){
+        font-size: 12px;
+    }
+}
+.btn{
+    position: relative;
+    background-color: $black;
+    color: $white;
+    padding: 15px 25px;
+    transition: background-color .1s ease-in-out;
+    &:hover{
+        background-color: $hover-btn;
+    }
+}
+.section{
+    position: relative;
+    width: 100%;
+}
+.social__list{
+    display: flex;
+    gap: 20px;
+}
+.clr-white{
+    color: $white;
+}
+.clr-black{
+    color: $black;
+}
+
+.grid-3fr {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1140px;
+    padding-top: 40px;
+    @media (max-width: 867px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 425px){
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    text-align: start;
+    padding: 15px;
+    box-shadow: 0 0 10px $grey;
+    transition: box-shadow .2s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 10px $black;
+    }
+    @media (max-width: 425px){
+        align-items: center;
+        text-align: center;
+    }
+
+		// .box__pic
+
+		&__pic {
+            position: relative;
+            width: 60px;
+            height: 60px;
+		}
+
+		// .box__pic-img
+
+		&__pic-img {}
+}
+
+.section-black {
+    position: relative;
+    padding: 200px 0;
+    background-color: $black;
+    display: grid;
+    place-content: center;
+}

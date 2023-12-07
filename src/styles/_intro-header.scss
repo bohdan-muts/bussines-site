@@ -1,0 +1,16 @@
+.introheader {
+    position: relative;
+    width: 100%;
+
+    // .introheader__wrapper
+
+    &__wrapper {
+        width: 100%;
+        padding: 200px 0;
+        background-color: $black;
+        color: $white;
+        display: grid;
+        place-content: center;
+    }
+}
+
